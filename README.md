@@ -4,7 +4,6 @@
 
 - [x] npm install
 - [x] yarn dev
-  then in your browser:
 - [x] localhost:3000
 
 
