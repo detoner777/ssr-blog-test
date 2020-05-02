@@ -1,0 +1,17 @@
+{
+  "name": "ssr-blog-test",
+  "version": "1.0.0",
+  "description": "test task DevelopsToday",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexey Lysenko",
+  "license": "ISC",
+  "dependencies": {
+    "styled-components": "^5.1.0"
+  }
+}
