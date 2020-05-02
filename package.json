@@ -1,17 +1,42 @@
 {
-  "name": "ssr-blog-test",
-  "version": "1.0.0",
-  "description": "test task DevelopsToday",
-  "main": "index.js",
+  "name": "ssr-test",
+  "description": "ssr blog test task",
+  "license": "",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_PATH=. NODE_ENV=production node server.js",
+    "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'"
   },
-  "author": "Alexey Lysenko",
-  "license": "ISC",
   "dependencies": {
-    "styled-components": "^5.1.0"
+    "axios": "^0.19.2",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-styled-components": "^1.2.1",
+    "express": "^4.16.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "next": "^4.0.3",
+    "next-routes": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^5.6.1",
+    "standard": "^10.0.3",
+    "styled-components": "^2.2.1"
+  },
+  "now": {
+    "alias": "next-go"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
   }
 }
